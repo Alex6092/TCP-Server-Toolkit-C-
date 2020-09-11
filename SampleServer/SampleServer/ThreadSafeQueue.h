@@ -27,7 +27,7 @@ ThreadSafeQueue<T>::ThreadSafeQueue()
 template<typename T>
 ThreadSafeQueue<T>::~ThreadSafeQueue()
 {
-	ReleaseMutex(mutex);
+	CloseHandle(mutex);
 }
 
 template<typename T>
